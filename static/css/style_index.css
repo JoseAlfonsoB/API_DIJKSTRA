@@ -1,0 +1,155 @@
+/* Estilo global */
+/* Estilo global */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 40px 20px; /* Espaciado para evitar que el contenido toque los bordes */
+  background-color: #0f1c24;
+  color: white;
+  min-height: 100vh; /* CAMBIADO de height a min-height */
+  overflow-y: auto;  /* CAMBIADO de hidden a auto para permitir scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* CAMBIADO de center a flex-start para que el contenido fluya hacia abajo */
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Agrupar título y subtítulo */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Fondo de partículas */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Título y subtítulo */
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+#text-inicio {
+  margin: 10px 0 30px;
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+/* Contenedor principal */
+#main-container {
+  display: flex;
+  flex-direction: column; /* CAMBIADO de row a column */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #1c2a33, #121d26);
+  padding: 40px 20px;
+  border-radius: 24px;
+  box-shadow: 0 0 25px #f9b23322;
+  gap: 40px;
+  z-index: 1;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Formulario */
+#form-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#dijkstraForm {
+  width: 100%;
+  max-width: 600px;
+  background-color: #1f2a30;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 10px #00000044;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background-color: #2e3d45;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.arista-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.arista-group input {
+  flex: 1;
+}
+
+/* Botones */
+.btn {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background-color: #f9b233;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn-add {
+  background-color: #ffaa00;
+  color: #000;
+}
+
+.btn:hover {
+  background-color: #e9a000;
+}
+
+/* Canvas */
+#canvas-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#graphCanvas {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  background-color: #1b2a30;
+  border-radius: 16px;
+  border: 2px dashed #f9b23344;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 0.75rem;
+  color: #888;
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+# Development environment
+apiDijkstra/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.pytest_cache/

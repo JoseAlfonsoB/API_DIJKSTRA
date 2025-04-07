@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Dijkstra</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_index.css') }}"
+    />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <div class="header">
+      <h1>Algoritmo Dijkstra</h1>
+      <p id="text-inicio">
+        Jośe Alfonso Bautista Arteaga
+      </p>
+    </div>
+
+    <div id="main-container">
+      <!-- Sección del formulario -->
+      <div id="form-section">
+        <form id="dijkstraForm" action="#">
+          <label for="nodos">Ingresa los nodos (separados por coma)</label>
+          <input
+            type="text"
+            placeholder="Ej: 1,2,3"
+            id="nodos"
+            name="nodos"
+            required
+          />
+
+          <label for="inicio">Nodo inicio</label>
+          <input
+            type="text"
+            placeholder="Ej: 1"
+            id="inicio"
+            name="inicio"
+            required
+          />
+
+          <label for="fin">Nodo destino</label>
+          <input type="text" placeholder="Ej: 4" id="fin" name="fin" required />
+
+          <div id="aristas-container">
+            <label>Conexión de aristas</label>
+            <div class="arista-group">
+              <input type="text" name="from[]" placeholder="Desde" required />
+              <input type="text" name="to[]" placeholder="Hacia" required />
+              <input
+                type="number"
+                name="weight[]"
+                placeholder="Peso"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-add" onclick="agregarArista()">
+            Agregar Arista
+          </button>
+          <button type="submit" class="btn">Calcular Ruta Más Corta</button>
+        </form>
+      </div>
+
+      <!-- Sección del canvas para mostrar el grafo -->
+      <div id="canvas-section">
+        <canvas id="graphCanvas" width="600" height="600"></canvas>
+      </div>
+    </div>
+
+    <!--Scripts de las particulas de fondo-->
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    <!-- <script>
+        particlesJS.load('particles-js', "{{ url_for('static', filename='js/particlesjs-config.json') }}", function() {
+            console.log('Partículas cargadas correctamente.');
+        });
+    </script> -->
+    <!--Scripts de la lógica del programa-->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <footer>
+      <div class="contenedor">
+        <p class="copy">ISIC - 3601 &copy; 2025 - IsmaelJrDev</p>
+      </div>
+    </footer>
+  </body>
+</html>
